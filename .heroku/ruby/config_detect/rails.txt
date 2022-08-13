@@ -1,0 +1,2 @@
+heroku.detecting.config.for.assets.compile=false
+heroku.detecting.config.for.action_dispatch.x_sendfile_header=

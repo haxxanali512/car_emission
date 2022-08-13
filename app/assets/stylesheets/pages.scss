@@ -1,0 +1,343 @@
+body{
+	margin: 0px;
+	font-family: 'Poppins', sans-serif !important;
+}
+$accordion-icon-active-color: white !important;
+$accordion-icon-color: white !important;
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.w-md-75{
+  width: 75%;
+
+  @media screen and (max-width: 540px) {
+    width: 100%;
+  }
+}
+.bg-header{
+	background-image:
+    linear-gradient(to bottom, rgba(4, 178, 151, 0.33), rgba(15, 77, 119, 0.10%)),
+    asset-url("benz-img.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
+}
+.text-green{
+	color: #02ba99;
+}
+.text-blue{
+	color: #104976;
+}
+
+.btn-success-green{
+  background-image: linear-gradient(to bottom, #248889 , #0d5d7c ) !important;
+}
+
+.blu-border{
+	border: 3px solid #104976;
+}
+.w-14{
+	width: 14% !important;
+}
+.fs-60{
+	font-size: 50px !important;
+}
+.btn-custom{
+	background-image: linear-gradient(to right, #104976 0%, #39ceb5 51%, #0f6780 100%);
+	margin: 10px;
+  padding: 15px 45px !important;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: flex !important;
+  &:hover{
+  	background-position: right center; /* change the direction of the change here */
+  	color: #fff;
+  	text-decoration: none;
+  }
+}
+.findAddress-btn{
+  position: absolute;
+  top: 1%;
+  right: 0px;
+  height: 45px;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+.bg-gcolor{
+	background-image: linear-gradient(to top, #02ba99 , #104976);
+}
+.bg-grcolor{
+	background-image: linear-gradient(to left, #02ba99 , #104976);
+}
+.bg-img-section-1{
+	background-image: asset-url("mercedes-service.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 26px;
+  min-height: 350px;
+}
+.h-6{
+	height: 6px !important;
+}
+.disp-none{
+	display: none;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
+.step.in-progress:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 42%;
+  border-radius: 100%;
+  box-sizing: border-box;
+  margin-top: -62.5px;
+  margin-left: 0px;
+  width: 125px;
+  height: 125px;
+  border: 5px solid rgba(52, 48, 48, 0.15);
+  border-top-color: rgba(67, 59, 59, 0.8);
+  -moz-animation: spin 0.6s linear 300;
+  -webkit-animation: spin 0.6s linear 300;
+  animation: spin 0.6s linear 300;
+}
+
+.step.in-progress{
+  pointer-events: none;
+  opacity: 0.8;
+}
+.bg-img-section-2{
+	background-image: asset-url("car-exhaust.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) contrast(1.1);
+  min-height: 350px;
+}
+.accordion-button::after{
+	background-image: asset-url("");
+}
+.accordion-button:not(.collapsed)::after{
+	background-image: asset-url("");
+}
+.form-control{
+	height: 45px !important;
+}
+
+.parsley-error-list{
+    clear: both;
+    display: block;
+    width: 100%;
+  }
+  label.error {
+    color: red;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  input.valid ~ .validate.success {
+    display: inline-block;
+  }
+  input.valid ~ .validate.error {
+    display: none;
+  }
+  input.error ~ .validate.error {
+    display: inline-block;
+  }
+  input.error ~ .validate.success {
+    display: none;
+  }
+  input.valid{
+    border: 2px solid #28a745 !important;
+  }
+  input.error {
+      border: 2px solid red !important;
+
+  }
+  .validate.success{
+    display: none;
+    color: #28a745 !important;
+    position: absolute;
+    float: right;
+    font-size: 25px;
+    right: 8%;
+    margin-top: -42px;
+  }
+  .validate.error{
+    display: none;
+    color: red !important;
+    position: absolute;
+    float: right;
+    font-size: 25px;
+    right: 8%;
+    margin-top: -42px;
+  }
+  // radio btn
+  .opacity-0{
+    opacity: 0;
+  }
+  .input-payment{
+    background-color: white;
+    width: 100%;
+    border: 1px solid #104c76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px !important;
+  }
+  .input-payment:hover{
+    color: white;
+    border: 1px solid #01b999;
+  }
+  .input-payment:after{
+    width: 25px;
+    height: 25px;
+    content: "";
+    border: 1px solid #104c76;
+    background-color: #b2e4db;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    left: 13%;
+    top: 21px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  input:checked ~ .input-payment:after{
+    background-color: #01b999;
+    border-color: #fff;
+    border:2px solid white;
+  }
+  input:checked ~ .input-payment{
+    color: white;
+    background-color: #01b999;
+  }
+  .input-pay-radio{
+    width: 100%;
+    left: 21px;
+    height: 55px;
+  }
+  input:hover ~ .input-payment{
+    border: 1px solid #01b999;
+    color: white;
+    background-color: #01b999;
+  }
+  input:hover ~ .input-payment:after{
+    border: 1px solid #d8f8f3;
+  }
+  
+  .input-div{
+    width: 24% !important;
+  }
+  .cursor-p{
+    cursor: pointer;
+  }
+  // 
+.w-26{
+	width: 26px !important;
+}
+.form-check-input:checked {
+    background-color: #03ba9a !important;
+    border-color: #03ba9a !important;
+}
+@media only screen and (max-width: 540px){
+	.w-14{
+		width: 48% !important;
+	}
+	.ps-sm-5rm{
+		padding-left: 5rem !important;
+	}
+	.step.in-progress:before {
+	  left: 32%;
+	}
+	.fs-60{
+		font-size: 23px !important;
+	}
+  .fs-sm-14{
+    font-size: 14px !important;
+  }
+	.bg-img-section-1{
+	  position: relative;
+	  right: 0px;
+	}
+	.bg-img-section-2{
+	  min-height: 215px;
+	}
+	.input-div{
+    width: 49% !important;
+  }
+  .w-26{
+		width: 70px !important;
+	}
+}
+
+@media only screen and (max-width: 280px){
+	.ps-sm-5rm{
+		padding-left: 0rem !important;
+	}
+}
+
+#signature-pad{
+  @media only screen and (max-width: 525px){
+    height: 130px !important;
+  }
+
+}

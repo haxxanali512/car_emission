@@ -1,0 +1,119 @@
+#diesel{
+  .header-bg{
+    background: asset-url('benz-bg.jpeg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #09474180;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .w-11{
+    width: 22% !important;
+  }
+  label.error {
+    color: red;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+  }
+  .girl-img{
+    position: absolute !important;
+    right: 36px;
+    bottom: 0%;
+    z-index: 90;
+  }
+  .form-div{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .reg-number {
+    height: 78px !important;
+    border: 5px solid #212529 !important;
+  }
+  .input-pay-radio{
+    width: 100%;
+    left: 0px;
+    height: 55px;
+  }
+  .input-div {
+    width: 25% !important;
+  }
+  .w-38{
+    width: 38%;
+  }
+  /* CSS */
+  .button-41 {
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #00D775, #00BD68);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+    height: 79px;
+    line-height: 44px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    z-index: 9;
+    border: 0;
+  }
+  .h-zindex{
+    z-index: 9;
+    position: relative;
+  }
+  
+  .button-41:hover {
+    background: #00bd68;
+  }
+  .bg-grcolor {
+    background-image: linear-gradient(to left, #00c069, #101576); 
+  }
+  .logo-text{
+    width: 50%;
+  }
+  
+  @media only screen and (max-width: 520px){
+    .input-div {
+      width: 50% !important;
+    }
+    .fs-sm-17{
+      font-size: 17px !important;
+    }
+    .fs-sm-24{
+      font-size: 24px !important;
+    }
+    .fs-sm-15{
+      font-size: 15px !important;
+    }
+    .logo-text{
+      width: 50%;
+    }
+  }
+}

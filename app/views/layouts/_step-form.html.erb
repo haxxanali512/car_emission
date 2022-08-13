@@ -1,0 +1,482 @@
+<div class="container">
+  <div class="row align-items-center justify-content-center pb-4">
+    <div class="col-md-10 px-0">
+      <div class="form-steps bg-light">
+        <form class="car-emission-form" id="car-emission-form" data-parsley-validate="parsley" data-details="<%= @details %>">
+          <div class="row w-100 mx-0 mb-md-5 mb-4">
+            <div class="progressbar-info d-flex align-items-center justify-content-between px-0">
+              <div>
+                <p class="progress-percent m-0 fw-bold">0% Complete</p>
+              </div>
+              <div>
+                <p class="progress-steps m-0 fw-bold">Step 1/5</p>
+              </div>
+            </div>
+            <div class="progress h-6 p-0">
+              <div id="progressBar" class="progress-bar bg-grcolor" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          
+          <div class="step position-relative">
+            <input type="hidden" class="mandatory" name="mandatory">
+            <input type="hidden" class="voluntary"  name="voluntary">
+           <h4 class="text-center text-blue fw-bold d-none d-md-block">Enter your vehicle registration <br> to start your free check</h4>
+						<h5 class="text-center text-blue fw-bold d-block d-md-none">Enter your vehicle registration <br> to start your free check</h5>
+						<div class="reg-step form-group">
+							<input
+							type="text" 
+							name="reg-number"
+							data-parsley-group="block-0"
+							class="form-control reg-number fw-bold py-3 text-center text-blue"
+							id="reg-number"
+							placeholder="Enter Car Regstration Number" 
+							>
+							<p class="error-400 text-danger d-none text-center w-100 small mb-0 mt-2">Please Enter Valid Registration Number</p>
+              <p class="error-402 text-danger d-none text-center w-100 small mb-0 mt-2">Please Enter Mercedes Registration Number</p>
+						</div>
+						<button type="button" class="btn button-41 register-btn mt-5 mx-auto fs-3 d-flex align-items-center justify-content-center px-4 px-lg-auto fw-bold">Start My Check <i class="fas fa-hand-point-right ps-2 fs-2 pt-1"></i></button>
+					</div>
+					<div class="step position-relative disp-none">
+						<h5 class="text-center ps-2 fw-bold text-blue">Is this your vehicle?</h5>
+						<h5 class="text-blue car-name car-title my-3 w-100 text-center"></h5>
+              <div class="row w-100 mx-0 align-items-center">
+                <div class="col-md-6 text-center mb-4 mb-md-0" data-parsley-group="block-1">
+                  <button type="button" class="btn btn-outline-secondary btn-next fs-4 w-75">Yes</button>
+                </div>
+                <div class="col-md-6 text-center">
+                  <button type="button" class="btn btn-outline-secondary restart-btn fs-4 w-75">No</button>
+                </div>
+              </div>
+					</div>
+          <div class="step position-relative disp-none">
+            <div class="purchase-detail-div mb-4">
+              <h5 class="fw-bold mt-4 text-blue">How did you pay for it?</h5>
+              <div class="details-check">
+                <input
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Slect One"
+                  data-parsley-group="block-2"
+                  data-parsley-multiple="purchase-detail"
+                  class="form-check-input approve purchase-type"
+                  type="radio"
+                  name="purchase-detail"
+                  id="purchase-detail-cash"
+                  value= 'In Cash'>
+                <label class="form-check-label" for="purchase-detail-cash">
+                  In Cash
+                </label>
+              </div>
+              <div class="details-check">
+                <input
+                class="form-check-input approve purchase-type"
+                type="radio"
+                name="purchase-detail"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Slect One"
+                data-parsley-group="block-2"
+                data-parsley-multiple="purchase-detail"
+                id="purchase-detail-hp"
+                value= 'HP (Higher Purchase)'>
+                <label class="form-check-label" for="purchase-detail-hp">
+                  HP (Higher Purchase)
+                </label>
+              </div>
+              <div class="details-check">
+                <input
+                class="form-check-input approve purchase-type"
+                type="radio"
+                name="purchase-detail"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Slect One"
+                data-parsley-group="block-2"
+                data-parsley-multiple="purchase-detail"
+                id="purchase-detail-pcp"
+                value='PCP (Personal Contract Purchase)'>
+                <label class="form-check-label" for="purchase-detail-pcp">
+                  PCP (Personal Contract Purchase)
+                </label>
+              </div>
+              <div class="details-check">
+                <input
+                class="form-check-input approve purchase-type other-purchase"
+                type="radio"
+                name="purchase-detail"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Slect One"
+                data-parsley-group="block-2"
+                data-parsley-multiple="purchase-detail"
+                id="purchase-detail-other"
+                value="Other">
+                <label class="form-check-label" for="purchase-detail-other">
+                  Other
+                </label>
+              </div>
+              <div class="error-checkbox"></div>
+            </div>
+            <div class="row justify-content-center align-items-center flex-sm-row-reverse">
+              <div class="col-md-6 mb-md-0 mb-4 text-center">
+                <button type="button" class="btn btn-outline-success btn-next w-75 fs-3">Next</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button type="button" class="btn btn-outline-secondary btn-back w-75 fs-3">Back</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step position-relative disp-none">
+            <h5 class="fw-bold mt-4 text-center text-blue">Please enter your details to join the action and make your claim</h5>
+            <div class="row w-100 mx-0 mt-4 justify-content-center">
+              <label class="fw-bold text-start pb-2">Title</label>
+              <div class="row justify-content-center px-0">
+                <div class="position-relative mt-2 mt-md-0 input-div">
+                  <input
+                  name="title"
+                  class="opacity-0 error-on-button title cursor-p form-control position-absolute input-pay-radio"
+                  id="title"
+                  data-parsley-group="block-3"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please select your title"
+                  type="radio"
+                  value="Mr"
+                  data-parsley-multiple="title">
+                  <label for="title" class="input-payment rounded py-2 mx-auto pl-3 cursor-p">
+                    Mr
+                  </label>
+                </div>
+                <div class="position-relative mt-2 mt-md-0 input-div">
+                  <input
+                  name="title"
+                  class="opacity-0 error-on-button title cursor-p form-control position-absolute input-pay-radio"
+                  id="title-ms"
+                  data-parsley-group="block-3"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please select your title"
+                  type="radio"
+                  value="Ms"
+                  data-parsley-multiple="title">
+                  <label for="title-ms" class="input-payment rounded py-2 mx-auto pl-3 cursor-p">
+                    Ms
+                  </label>
+                </div>
+                <div class="position-relative mt-2 mt-md-0 input-div">
+                  <input
+                  name="title"
+                  class="opacity-0 error-on-button title cursor-p form-control position-absolute input-pay-radio"
+                  id="title-mrs"
+                  data-parsley-group="block-3"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please select your title"
+                  type="radio"
+                  value="Mrs"
+                  data-parsley-multiple="title">
+                  <label for="title-mrs" class="input-payment rounded py-2 mx-auto pl-3 cursor-p">
+                    Mrs
+                  </label>
+                </div>
+                <div class="position-relative mt-2 mt-md-0 input-div">
+                  <input
+                  name="title"
+                  class="opacity-0 error-on-button title cursor-p form-control position-absolute input-pay-radio"
+                  id="title-dr"
+                  data-parsley-group="block-3"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please select your title"
+                  type="radio"
+                  value="Dr"
+                  data-parsley-multiple="title">
+                  <label for="title-dr" class="input-payment rounded py-2 mx-auto pl-3 cursor-p">
+                    Dr
+                  </label>
+                </div>
+                <div class="error-box"></div>
+              </div>
+            </div>
+            <div class="name-div">
+              <div class="row w-100 m-0 align-items-center">
+                <div class="col-12 mt-4 text-center form-group">
+                  <label class="d-flex justify-content-start fw-bold mb-2">
+                    First Name
+                  </label>
+                  <input
+                    placeholder="First Name"
+                    id="first_name"
+                    name="first_name"
+                    class="first_name px-2 mx-auto bg-white rounded text-secondary form-control position-relative"
+                    data-parsley-required="true"
+                    data-parsley-minlength="2"
+                    minlength="2"
+                    maxlength="15"
+                    data-parsley-minlength-message="Please Enter Minimum Two Alphabet"
+                    data-parsley-required-message="Please Enter First Name"
+                    data-parsley-group="block-3"
+                    data-parsley-pattern-message="First Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    type="text"
+                    required>
+                    <div class="text-center col-12">
+                      <p class="error-message-firstname d-none fs-14 text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 text-center form-group">
+                  <label class="d-flex justify-content-start fw-bold mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    placeholder="Last Name"
+                    id="last_name"
+                    name="last_name"
+                    class="last_name px-2 mx-auto bg-white rounded text-secondary form-control position-relative"
+                    data-parsley-minlength="2"
+                    minlength="2"
+                    maxlength="15"
+                    data-parsley-minlength-message="Please Enter Minimum Two Alphabet"
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Last Name"
+                    data-parsley-group="block-3"
+                    data-parsley-pattern-message="Last Name Must Be Alphabetic" data-parsley-pattern="/^[a-zA-Z ]*$/"
+                    type="text"
+                    required>
+                  <div class="text-center col-12">
+                    <p class="error-message-lastname d-none fs-14 text-danger"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dob-div">
+              <div class="mt-4 text-center form-group row w-100 mx-0">
+                <label class="d-flex justify-content-start fw-bold mb-2">
+                  Date Of Birth
+                </label>
+                <div class="row w-100 mx-0 dob text-center">
+                  <div class="col-md-4 mb-2 mb-md-0 ps-md-0">
+                    <select
+                      name="dayOfBirth"
+                      class="w-100 form-select"
+                      required
+                      id="dayOfBirth"
+                      data-parsley-required="true"
+                      data-parsley-group="block-3"
+                      data-parsley-required-message="Please Choose Day of Birth">
+                      <option selected="selected" value="">Day</option>
+                      <% (1..31).each do |i| %>
+                        <option value="<%= i %>"> <%= i %> </option>
+                      <% end %>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-2 mb-md-0">
+                    <select
+                      name="monthOfBirth"
+                      class=" w-100 form-select"
+                      required
+                      id="monthOfBirth"
+                      data-parsley-required="true"
+                      data-parsley-group="block-3"
+                      data-parsley-required-message="Please Choose Month of Birth">
+                      <option selected="selected" value="">Month</option>
+                      <option value="01">January</option>
+                      <option value="02">February</option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                      <option value="08">August</option>
+                      <option value="09">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-2 mb-md-0">
+                    <select
+                      name="yearOfBirth"
+                      class=" w-100 form-select"
+                      required
+                      id="yearOfBirth"
+                      data-parsley-required="true"
+                      data-parsley-group="block-3"
+                      data-parsley-required-message="Please Choose Year of Birth">
+                      <option selected="selected" value="">Year</option>
+                      <% 2004.downto(1930) do |i| %>
+                        <option value="<%= i %>"> <%= i %> </option>
+                      <% end %>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+						<div class="row mt-4 w-100 mx-0">
+              <!-- postcode -->
+              <div class="form-group col-12 position-relative">
+                <label class="d-flex justify-content-start fw-bold mb-2">Enter Your Postcode</label>
+                <div class="w-100 position-relative">
+                  <input
+                  name="postcode"
+                  required
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please enter your Postcode"
+                  data-parsley-group="block-3"
+                  data-parsley-validapipostcode
+                  type="text"
+                  class="postcode form-control approve"
+                  placeholder="Postcode">
+                  <button type="button" class="btn btn-success rounded-right left-0r findAddress-btn">Find Address</button>
+                </div>
+                <div class="error-checkbox"></div>
+              </div>
+
+              <div class="form-group col-12 property-div disp-none">
+                <label class="d-flex justify-content-start fw-bold mb-2 mt-2">Address where the vehicle registered?</label>
+                <input type="hidden" name="towncity" class="towncity" >
+                <input type="hidden" name="street1" class="street1" >
+                <input type="hidden" name="county" class="county" >
+                <input type="hidden" name="houseNumber" class="houseNumber" >
+                <input type="hidden" name="street2" class="street2" >
+                <input type="hidden" name="building" class="building" >
+                <input type="hidden" name="address" class="address">
+                <select
+                  id="property"
+                  name="property"
+                  class="property w-100 form-control text-dark"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Select Your property"
+                  data-parsley-group="block-3"
+                  required>
+                </select>
+              </div>
+              <div class="form-group col-12 address-div disp-none">
+                <label class="d-flex justify-content-start fw-bold mb-2">
+                  Your Complete Address
+                </label>
+                <input
+                  placeholder="Address"
+                  id="address"
+                  name="address"
+                  class="address form-control"
+                  data-parsley-required="true"
+                  data-parsley-required-message="Please Enter Your Complete Address"
+                  data-parsley-group="block-3"
+                  type="text"
+                  >
+              </div>
+            </div>
+            <div class="contact-div">
+              <div class="row m-0 w-100 ">
+                <div class="col-12 mt-4 text-center form-group">
+                  <label class="d-flex justify-content-start fw-bold mb-2">
+                    Email
+                  </label>
+                  <input
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    class="email px-2 mx-auto bg-white rounded text-secondary form-control position-relative"
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid Email Address"
+                    data-parsley-group="block-3"
+                    data-parsley-type="email"
+                    data-parsley-validemail
+                    type="email"
+                    required>
+                </div>
+                <div class="col-12 mt-4 text-center form-group">
+                  <label class="d-flex justify-content-start fw-bold mb-2">
+                    Mobile Number
+                  </label>
+                  <input
+                    placeholder="Mobile number"
+                    id="phone"
+                    name="phone"
+                    class="phone px-2 mx-auto bg-white rounded text-secondary form-control position-relative"
+                    data-parsley-required="true"
+                    data-parsley-required-message="Please Enter Valid UK Mobile Number"
+                    data-parsley-group="block-3"
+                    data-parsley-type="number"
+                    data-parsley-validphone
+                    data-parsley-minlength="11"
+                    data-parsley-minlength-message="Please Enter Valid length of UK Mobile Number"
+                    type="tel"
+                    required>
+                    <small>Mobile number should be in this format (07xxxxxxxxx)</small>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center align-items-center flex-sm-row-reverse mt-3">
+              <div class="col-md-9 mb-md-0 mb-4">
+                <button type="button" class="btn btn-success btn-next w-100 fs-3">Complete Check</button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-secondary btn-back w-100 fs-3">Back</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="step position-relative disp-none">
+            <div class="last-div">
+              <label class="fw-bold">When did you purchase the vehicle?</label>
+               <div class="mb-2 mb-md-0">
+                  <select
+                    name="vehicle-purchase"
+                    class=" w-100 form-select"
+                    required
+                    id="vehicle-purchase"
+                    data-parsley-required="true"
+                    data-parsley-group="block-4"
+                    data-parsley-required-message="Please Choose Year of Purchase">
+                    <option selected="selected" value="">Year</option>
+                    <% 2019.downto(2008) do |i| %>
+                      <option value="<%= i %>"> <%= i %> </option>
+                    <% end %>
+                    <option value="Dont Remember">Don't Remember</option>
+                  </select>
+                </div>
+            </div>
+            <div class="mt-4">
+              <h5>Signature Required</h5>
+              <p>
+                Your signature allows us to act on your behalf and package a claim for a Solicitor to operate on a No-Win, No-Fee basis.
+              </p>
+              <div>
+                <canvas
+                  id="signature-pad"
+                  height="150px"
+                  class="d-block w-100 border shadow-sm mb-2">
+                </canvas>
+                <input type="text" id="signatureInput" name="signature" 
+                class="signature d-none" 
+                data-parsley-required="true" 
+                data-parsley-required-message="Please Enter Your Signature" 
+                data-parsley-group="block-4">
+              </div>
+              <div class="d-flex justify-content-between mt-2 align-items-center">
+                <strong>Signed: <span class="full-name text-capitalize">Ren Doustache</span></strong>
+                <button class="btn btn-secondary" id="clear"><span> Clear </span></button>
+              </div>
+            </div>
+            
+           
+            <div class="error-box"></div>
+            <div class="agree-check d-flex mt-4">
+              <input class="form-check-input w-26 me-md-3 me-2" type="checkbox" value="" id="agree-btn" checked>
+              <label class="form-check-label" for="agree-btn">
+                I confirm i'm happy to proceed and understand the terms of business and realise I have a 14-day  cooling off period, detailed in <a target="_blank" href="/terms" class="text-decoration-none text-green">terms of business</a> & <a target="_blank" class="text-decoration-none text-green" href="/privacy">privacy policy</a>
+              </label>
+            </div>
+            <div class="mt-3">
+              <label >
+                By clicking submit, I agree to be contacted by Car Emission Claims and its Partners via phone, SMS & email in accordance with these <a target="_blank" href="/terms" class="text-decoration-none text-green">terms and conditions </a> and <a target="_blank" class="text-decoration-none text-green" href="/privacy">privacy policy</a>
+              </label>
+            </div>
+            <div class="row justify-content-center align-items-center flex-sm-row-reverse mt-4">
+              <div class="col-md-9 mb-md-0 mb-4">
+                <button type="button" id="submit" class="btn btn-success btn-next w-100 fs-3">Submit</button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-secondary btn-back w-100 fs-3">Back</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

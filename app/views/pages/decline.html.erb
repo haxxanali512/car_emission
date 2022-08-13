@@ -1,0 +1,21 @@
+<%= javascript_pack_tag 'decline', 'data-turbolinks-track': 'reload', defer: true %>
+<div class="container my-5">
+  <%= render 'layouts/header'%>
+  <div class="align-items-md-center rounded border justify-content-center mt-5 mx-auto px-3 py-5 row shadow w-md-75">
+   
+    <div class="col-lg-1 col-2 text-center mb-4 mb-md-0">
+      <i class="fa fa-times-circle text-danger fs-60"></i>
+    </div>
+    <div class="col-10 ">
+      <h4 class="fw-light">Unfortunately, <span class="car-title fw-bold"><%=@car_name%></span> does not meet the criteria that we are currently investigating, and we are unable to assist you further.</h4>
+    </div>
+    <div>
+      <button type="button" class="btn btn-success-green rounded-pill border-0 shadow py-2 restart-btn w-100 text-white fs-3 mt-4">Try Another Vehicle</button>
+
+      <p class="w-100 text-center pt-3 fs-3">
+        No-Win, No-Cost To You  . Free Online Check
+      </p>
+    </div>
+  </div>
+</div>
+<%= render 'layouts/footer'%>

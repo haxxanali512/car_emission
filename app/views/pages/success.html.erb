@@ -1,0 +1,13 @@
+<div class="container">
+	<%= render 'layouts/header'%>
+	<div class="row justify-content-center my-5">
+		<div class="col-md-6">
+			<div class="rounded-3 bg-light shadow p-4 text-center">
+				<%= image_tag('success-check.gif', class: 'w-25 mb-4')%>
+				<h1 class="fw-bold">Congratulations <span class="success-name text-green"><%= params[:f_name]%></span>!</h1>
+				<h4 class="text-center">Your claim has been submitted for <span class="car-title text-green"> <%= params[:car_name]%></span></h4>
+				<p class="text-center">We are now processing your claim request and maybe in contact via SMS with any other information we may need.</p>
+			</div>
+		</div>
+	</div>
+</div>
